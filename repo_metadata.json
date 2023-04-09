@@ -1,5 +1,6 @@
 {
   "repo_name": "daniel-test11",
   "repo_type": "library",
-  "deployable": false
+  "deployable": false,
+  "demo": true
 }
