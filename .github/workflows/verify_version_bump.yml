@@ -7,8 +7,7 @@ on:
       - '*'         # matches every branch that doesn't contain a '/'
       - '*/*'       # matches every branch containing a single '/'
       - '**'        # matches every branch
-      - '!dev'   # excludes master
-
+      - '!master'   # excludes master
 
 
 jobs:
@@ -31,13 +30,7 @@ jobs:
           pwd
           git fetch > /dev/null 2>&1
           cp pyproject.toml current_toml
-          current_branch=$(git status | grep "On branch" | cut -d " " -f 3)
-          if [ "$current_branch" = "dev" ]
-          then
-            git checkout main
-          else
-            git checkout dev
-          fi
+          git checkout main
           if (diff current_toml pyproject.toml | grep version)
           then
             echo "Version was bumped, Cheers"
