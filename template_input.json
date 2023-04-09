@@ -1,6 +1,6 @@
 {
-    "_output_dir": "/private/tmp/devocean",
-    "_template": "/Users/danielhabib/src/devOcean/dev-repositories-management/templates",
+    "_output_dir": "/tmp/devocean",
+    "_template": "/home/runner/work/dev-repositories-management/dev-repositories-management/templates",
     "include_github_actions": "yes",
     "project_slug": "daniel_test11",
     "repo_description": "",
